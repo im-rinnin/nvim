@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- clolorscheme
     "sainnhe/gruvbox-material",
+
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -23,6 +24,7 @@ require("lazy").setup({
             "nvim-tree/nvim-web-devicons",
         },
     },
+
     "simnalamburt/vim-mundo",
 
     { "nvim-telescope/telescope.nvim", tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -58,14 +60,11 @@ require("lazy").setup({
   dependencies = {
     "nvim-lua/plenary.nvim",         -- required
     "sindrets/diffview.nvim",        -- optional - Diff integration
-
     -- Only one of these is needed, not both.
     "nvim-telescope/telescope.nvim", -- optional
   },
   config = true
-}
-,
-
+},
 
     "williamboman/mason.nvim",
     "neovim/nvim-lspconfig",
