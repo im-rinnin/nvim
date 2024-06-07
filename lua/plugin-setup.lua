@@ -8,7 +8,7 @@ require('mason-lspconfig').setup({
 --require("lspconfig").lua-language-server.setup{}
 
 require("symbols-outline").setup({})
-require("nvim-tree").setup({})
+--require("nvim-tree").setup({})
 require("nvim-treesitter").setup(
     {
         ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html", "css", "python", "rust", "java" },
@@ -29,6 +29,7 @@ require("nvim-treesitter").setup(
 require("nvim-cmp")
 
 require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
-
+-- init.lua
 local neogit = require('neogit')
 neogit.setup {}
+
