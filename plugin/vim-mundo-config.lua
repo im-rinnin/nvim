@@ -1,3 +1,3 @@
 -- vim-mundo
 vim.opt.undofile=true
-vim.opt.undodir='undo'
+vim.opt.undodir='~/.undo'
