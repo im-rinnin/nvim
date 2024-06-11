@@ -72,8 +72,8 @@ require("lazy").setup({
 
     "simrat39/symbols-outline.nvim",
     "mfussenegger/nvim-dap",
-    "mfussenegger/nvim-dap-python"
-
+    "mfussenegger/nvim-dap-python",
+     "airblade/vim-gitgutter"
 
 })
 

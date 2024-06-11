@@ -17,6 +17,7 @@ vim.opt.number = true -- show absolute number
 vim.opt.splitbelow = true -- open new vertical split bottom
 vim.opt.splitright = true -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
+vim.opt.cursorline=true
 
 
 -- Searching

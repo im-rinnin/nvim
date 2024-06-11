@@ -25,3 +25,9 @@ vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "<leader>s", ":w<CR>", { silent = true })
+
+vim.keymap.set('n', '<leader>t', ":NvimTreeToggle<CR>", {})
+
+vim.keymap.set('n', '<leader>gg', ":GitGutterToggle<CR>", {})
+vim.keymap.set('n', '<leader>ng', ":Neogit<CR>", {})
+vim.keymap.set('n', '<leader>md', ":MundoToggle<CR>", {})
