@@ -25,7 +25,3 @@ local function open_nvim_tree()
 end
 ---- alaways open the tree
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
---
---vim.api.nvim_create_autocmd("TabNewEntered", {
---        callback=open_nvim_tree
---})

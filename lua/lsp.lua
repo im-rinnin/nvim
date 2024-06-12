@@ -24,7 +24,7 @@ local on_attach = function(client, bufnr)
     local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 
-    vim.keymap.set('n', '<leader>l', vim.lsp.buf.format, bufopts)
+    vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, bufopts)
     vim.keymap.set('n', '<leader>h', vim.lsp.buf.document_symbol, bufopts)
 
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
@@ -51,9 +51,8 @@ end
 -- 1. use `:Mason` to install corresponding LSP
 -- 2. add configuration below
 lspconfig.pylsp.setup({
-	on_attach = on_attach,
+    on_attach = on_attach,
 })
 lspconfig.lua_ls.setup({
-	on_attach = on_attach,
+    on_attach = on_attach,
 })
-

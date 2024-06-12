@@ -27,14 +27,38 @@ require("lazy").setup({
 
     "simnalamburt/vim-mundo",
 
-    { "nvim-telescope/telescope.nvim", tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
+    {
+        "nvim-telescope/telescope.nvim",
+        branch = '0.1.x',
+        dependencies = { 'nvim-lua/plenary.nvim'
+        , 'BurntSushi/ripgrep' }
+    },
     "pocco81/auto-save.nvim",
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
-
     },
-    -- Vscode-like pictograms
+    -- use gc/gcc to comment line
+    {
+        'numToStr/Comment.nvim',
+        opts = {
+        }
+    },
+    ---------------------- git
+    {
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim",         -- required
+            "sindrets/diffview.nvim",        -- optional - Diff integration
+            -- Only one of these is needed, not both.
+            "nvim-telescope/telescope.nvim", -- optional
+        },
+        config = true
+    },
+
+    "airblade/vim-gitgutter",
+    -----------------------lsp
+    -- Vscode-like pictograms for lsp
     {
         "onsails/lspkind.nvim",
         event = { "VimEnter" },
@@ -55,27 +79,11 @@ require("lazy").setup({
         "L3MON4D3/LuaSnip",
         version = "v2.*",
     },
-    {
-  "NeogitOrg/neogit",
-  dependencies = {
-    "nvim-lua/plenary.nvim",         -- required
-    "sindrets/diffview.nvim",        -- optional - Diff integration
-    -- Only one of these is needed, not both.
-    "nvim-telescope/telescope.nvim", -- optional
-  },
-  config = true
-},
-
-    "williamboman/mason.nvim",
+    { "williamboman/mason.nvim", opts = {} },
     "neovim/nvim-lspconfig",
     "williamboman/mason-lspconfig.nvim",
-
     "simrat39/symbols-outline.nvim",
     "mfussenegger/nvim-dap",
     "mfussenegger/nvim-dap-python",
-     "airblade/vim-gitgutter"
-
+    --------------- lsp
 })
-
-require("plugin-setup")
-
