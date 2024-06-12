@@ -75,6 +75,8 @@ require("lazy").setup({
         }
     },
 
+
+
     ---------------------- git
     {
         "NeogitOrg/neogit",
@@ -87,33 +89,4 @@ require("lazy").setup({
         config = true
     },
 
-    -----------------------lsp
-    -- Vscode-like pictograms for lsp
-    {
-        "onsails/lspkind.nvim",
-        event = { "VimEnter" },
-    },
-    -- Auto-completion engine
-    {
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            "lspkind.nvim",
-            "hrsh7th/cmp-nvim-lsp", -- lsp auto-completion
-            "hrsh7th/cmp-buffer",   -- buffer auto-completion
-            "hrsh7th/cmp-path",     -- path auto-completion
-            "hrsh7th/cmp-cmdline",  -- cmdline auto-completion
-        },
-    },
-    -- Code snippet engine
-    {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*",
-    },
-    { "williamboman/mason.nvim", opts = {} },
-    "neovim/nvim-lspconfig",
-    "williamboman/mason-lspconfig.nvim",
-    "simrat39/symbols-outline.nvim",
-    "mfussenegger/nvim-dap",
-    "mfussenegger/nvim-dap-python",
-    --------------- lsp
 })
