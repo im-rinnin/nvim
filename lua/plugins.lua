@@ -31,7 +31,8 @@ require("lazy").setup({
         "nvim-telescope/telescope.nvim",
         branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim'
-        , 'BurntSushi/ripgrep' }
+        , 'BurntSushi/ripgrep' },
+        event = 'VimEnter'
     },
     "pocco81/auto-save.nvim",
     {
@@ -44,6 +45,36 @@ require("lazy").setup({
         opts = {
         }
     },
+
+    {
+        "lewis6991/gitsigns.nvim",
+        opts = {
+            signs = {
+                add = { text = '+' },
+                change = { text = '~' },
+                delete = { text = '_' },
+                topdelete = { text = '‾' },
+                changedelete = { text = '~' },
+            },
+
+        }
+    },
+
+    --which key
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
+
     ---------------------- git
     {
         "NeogitOrg/neogit",
@@ -56,7 +87,6 @@ require("lazy").setup({
         config = true
     },
 
-    "airblade/vim-gitgutter",
     -----------------------lsp
     -- Vscode-like pictograms for lsp
     {
