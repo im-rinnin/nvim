@@ -61,7 +61,7 @@ local lspconfig = require("lspconfig")
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer','clangd' },
+    ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer','clangd','jsonls' },
 })
 
 lspconfig.pylsp.setup({
@@ -100,6 +100,9 @@ lspconfig.rust_analyzer.setup({
 })
 
 lspconfig.clangd.setup({
+	on_attach = on_attach,
+})
+lspconfig.jsonls.setup({
 	on_attach = on_attach,
 })
 
