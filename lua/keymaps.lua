@@ -44,6 +44,9 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fw', builtin.grep_string, {})
 vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+vim.keymap.set('n', '<leader>gs', ":Telescope lsp_workspace_symbols query=", { desc = '[S]earch Symbol("." for repeat)' })
+vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { desc = '[S]earch Symbol("." for repeat)' })
+vim.keymap.set('n', '<leader>fs', builtin.git_status, { desc = '[S]earch Symbol("." for repeat)' })
 
 
 -- gitsigns
