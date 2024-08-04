@@ -189,6 +189,7 @@ require("lazy").setup({
 
     -- debug
     'puremourning/vimspector',
---    require 'debug-setup'
+        -- Highlight word
+    'RRethy/vim-illuminate'
 })
 
